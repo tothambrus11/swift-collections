@@ -18,6 +18,9 @@ else()
 
   _install_target(DequeModule)
   set_property(GLOBAL APPEND PROPERTY SWIFT_COLLECTIONS_EXPORTS DequeModule)
+  
+  # Re-export InternalCollectionsUtilities so dependents can access it
+  swift_module_re_exports(DequeModule InternalCollectionsUtilities)
 endif()
 
 target_sources(${module_name} PRIVATE
