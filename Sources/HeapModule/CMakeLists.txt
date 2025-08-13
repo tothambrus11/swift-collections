@@ -16,7 +16,7 @@ else()
   target_link_libraries(HeapModule PRIVATE
     InternalCollectionsUtilities)
   set_target_properties(HeapModule PROPERTIES
-    INTERFACE_INCLUDE_DIRECTORIES ${CMAKE_Swift_MODULE_DIRECTORY})
+    INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_Swift_MODULE_DIRECTORY}")
 
   _install_target(HeapModule)
   set_property(GLOBAL APPEND PROPERTY SWIFT_COLLECTIONS_EXPORTS HeapModule)

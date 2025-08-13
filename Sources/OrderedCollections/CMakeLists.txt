@@ -15,8 +15,6 @@ else()
     ${COLLECTIONS_ORDERED_SOURCES})
   target_link_libraries(OrderedCollections PRIVATE
     InternalCollectionsUtilities)
-  set_target_properties(OrderedCollections PROPERTIES
-    INTERFACE_INCLUDE_DIRECTORIES ${CMAKE_Swift_MODULE_DIRECTORY})
 
   _install_target(OrderedCollections)
   set_property(GLOBAL APPEND PROPERTY SWIFT_COLLECTIONS_EXPORTS OrderedCollections)

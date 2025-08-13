@@ -16,7 +16,7 @@ else()
   target_link_libraries(HashTreeCollections PRIVATE
     InternalCollectionsUtilities)
   set_target_properties(HashTreeCollections PROPERTIES
-    INTERFACE_INCLUDE_DIRECTORIES ${CMAKE_Swift_MODULE_DIRECTORY})
+    INTERFACE_INCLUDE_DIRECTORIES "${CMAKE_Swift_MODULE_DIRECTORY}")
 
   _install_target(HashTreeCollections)
   set_property(GLOBAL APPEND PROPERTY SWIFT_COLLECTIONS_EXPORTS HashTreeCollections)
