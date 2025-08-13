@@ -14,7 +14,7 @@ target_link_libraries(Collections PRIVATE
   DequeModule
   HeapModule
   OrderedCollections
-  HashTreeCollections
+  HashTreeCollections # maybe _RopeModule is missing?
   )
 
 _install_target(Collections)
@@ -31,5 +31,9 @@ function(swift_module_re_exports exporter exported)
   "$<IF:$<STREQUAL:${swift_module_directory},>,${binary_directory},${swift_module_directory}>")
 endfunction()
 
+# All the .exported targets from Package.swift
+swift_module_re_exports(Collections BitCollections)
 swift_module_re_exports(Collections DequeModule)
+swift_module_re_exports(Collections HeapModule)
 swift_module_re_exports(Collections OrderedCollections)
+swift_module_re_exports(Collections HashTreeCollections) # maybe _RopeModule is missing?
