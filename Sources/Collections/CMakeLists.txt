@@ -37,3 +37,4 @@ swift_module_re_exports(Collections DequeModule)
 swift_module_re_exports(Collections HeapModule)
 swift_module_re_exports(Collections OrderedCollections)
 swift_module_re_exports(Collections HashTreeCollections) # maybe _RopeModule is missing?
+swift_module_re_exports(Collections InternalCollectionsUtilities)
